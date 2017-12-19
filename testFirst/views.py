@@ -8,5 +8,4 @@ from customer_analytics_backend.user_decode import decodeUser
 class First(APIView):
     def get(self, request, *args):
         print(decodeUser(request))
-        time.sleep(10)
         return JsonResponse(None, status=status.HTTP_200_OK, safe=False)

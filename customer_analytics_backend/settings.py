@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_jwt',
     'corsheaders',
+    'management',
 ]
 
 MIDDLEWARE = [
@@ -79,8 +81,8 @@ DB_ENGINE='django.db.backends.postgresql'
 DATABASE_NAME='tracker'
 DATABASE_USER='postgres'
 DATABASE_PASSWORD='root'
-# DATABASE_HOST='10.1.182.88'
-DATABASE_HOST='192.168.0.102 '
+DATABASE_HOST='localhost'
+# DATABASE_HOST='192.168.0.102'
 DATABASE_PORT=5432
 
 DATABASES = {
@@ -157,3 +159,38 @@ CORS_ALLOW_METHODS = (
     'POST',
     'PUT',
 )
+
+JET_THEMES = [
+    {
+        'theme': 'default', # theme folder name
+        'color': '#47bac1', # color of the theme's button in user menu
+        'title': 'Default' # theme title
+    },
+    {
+        'theme': 'green',
+        'color': '#44b78b',
+        'title': 'Green'
+    },
+    {
+        'theme': 'light-green',
+        'color': '#2faa60',
+        'title': 'Light Green'
+    },
+    {
+        'theme': 'light-violet',
+        'color': '#a464c4',
+        'title': 'Light Violet'
+    },
+    {
+        'theme': 'light-blue',
+        'color': '#5EADDE',
+        'title': 'Light Blue'
+    },
+    {
+        'theme': 'light-gray',
+        'color': '#222',
+        'title': 'Light Gray'
+    }
+]
+
+JET_SIDE_MENU_COMPACT = True
